@@ -27,6 +27,7 @@ class Form{
             var pressedResponse0Option1 = createElement("h4")
             pressedResponse0Option1.html("Yes")
             pressedResponse0Option1.position(140,120)
+            pressedResponse.push(pressedResponse0Option1);
             response0.push("yes")
         })
         var response0Option2 = createButton("No")
@@ -37,6 +38,7 @@ class Form{
             var pressedResponse0Option2 = createElement("h4")
             pressedResponse0Option2.html("No")
             pressedResponse0Option2.position(190,120)
+            pressedResponse.push(pressedResponse0Option2);
             response0.push("no")
         })
         var response1Question = createElement("h4")
@@ -50,6 +52,7 @@ class Form{
             var pressedResponse1Option1 = createElement("h4")
             pressedResponse1Option1.html("Yes")
             pressedResponse1Option1.position(140,170)
+            pressedResponse.push(pressedResponse1Option1);
             response1.push("yes")
         })
         var response1Option2 = createButton("No")
@@ -60,6 +63,7 @@ class Form{
             var pressedResponse1Option2 = createElement("h4")
             pressedResponse1Option2.html("No")
             pressedResponse1Option2.position(190,170)
+            pressedResponse.push(pressedResponse1Option2);
             response1.push("no")
         })
         var button = createButton("Finish")
@@ -78,6 +82,12 @@ class Form{
            response1Option2.hide();
            response0Option1.hide();
            response0Option2.hide();
+           for (var i =0;i<pressedResponse.length;i++){
+               pressedResponse[i].hide()
+           }
+           var recorded = createElement("h1");
+           recorded.html("Your response has been recorded")
+           recorded.position(30,50)
         });
     }
     emailUpdate(){

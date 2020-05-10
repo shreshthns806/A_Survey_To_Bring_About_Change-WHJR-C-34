@@ -1,4 +1,4 @@
-var db,gameState=0,playerCount,form,player,game,votersemail=[],votersname=[],response0=[],response1=[];
+var db,gameState=0,playerCount,form,player,game,votersemail=[],votersname=[],response0=[],response1=[],pressedResponse=[];
 function setup(){
     createCanvas(500,500);
     db=firebase.database();
@@ -13,5 +13,6 @@ console.log(response0)
 form.emailUpdate()
 form.nameUpdate();
 form.response0Update();
+form.response1Update();
 }
 
