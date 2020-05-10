@@ -69,7 +69,9 @@ class Form{
            votersname.push(nameInput.value())
            title.hide();
            nameInput.hide();
+           nameInputText.hide();
            emailInput.hide();
+           emailInputText.hide();
            response1Question.hide();
            response0Question.hide();
            response1Option1.hide();
